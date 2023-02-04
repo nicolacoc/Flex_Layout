@@ -28,7 +28,7 @@ body {
 
 /*NAV SECTION*/
 
-.site-nav{
+.site-nav {
     display: flex;
     padding: .5em;
     list-style-type: none;
@@ -36,11 +36,11 @@ body {
     border-radius: .2em;
 }
 
-.site-nav > li{
+.site-nav > li {
     margin-top: 0;
 }
 
-.site-nav > li > a{
+.site-nav > li > a {
     display: block;
     padding: .5em 1em;
     background-color: #b1afaf;
@@ -48,17 +48,107 @@ body {
     text-decoration: none;
 }
 
-.site-nav > li > a:hover{
+.site-nav > li > a:hover {
     background-color: #858383;
 }
 
-.site-nav > li + li{
+.site-nav > li + li {
     margin-left: .5em;
 }
 
-.site-nav > .nav-right{
+.site-nav > .nav-right {
     margin-left: auto;
 }
 
 /*MAIN*/
+/*FLEX CONTAINER*/
 
+main {
+    display: flex;
+}
+
+/*FLEX ITEMS*/
+
+main > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.tile {
+    background-color: white;
+    padding: 1.5em;
+}
+
+.tile :first-child {
+    margin-top: 0;
+}
+
+.colum-main {
+    flex: 3;
+}
+
+.colum-sidebar {
+    flex: 1;
+}
+
+
+.colum-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.colum-sidebar > .tile {
+    flex: 1;
+}
+
+/*SIDEBAR*/
+
+.login-form h3{
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.login-form label{
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form input[type="text"], .login-form input[type="password"]{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #4a5952;
+    padding: .5em 1em;
+}
+
+.centered{
+    text-align: center;
+}
+
+.cost{
+    display: flex;
+    justify-content: center; /*ORIZONTALMENTE*/
+    align-items: center; /*VERTICALMENTE*/
+    line-height: .7em;
+}
+
+.cost > span{
+    margin-top: 0;
+}
+
+.cost-currency{
+    font-size: 2em;
+}
+
+.cost-dollars{
+    font-size: 4em;
+}
+
+.cost-cents{
+    font-size: 1.5em;
+    align-self: flex-start;
+}
