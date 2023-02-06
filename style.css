@@ -125,19 +125,38 @@ main > * + * {
     padding: .5em 1em;
 }
 
+/*SPECIAL OFFER BANNER*/
+
 .centered{
     text-align: center;
 }
 
-.cost{
+/*SPECIAL OFFER FLEX*/
+
+.special-offer{
     display: flex;
-    justify-content: center; /*ORIZONTALMENTE*/
-    align-items: center; /*VERTICALMENTE*/
-    line-height: .7em;
+    flex-direction: column;
+}
+
+.cost{
+
+    margin-top: auto;
+    padding: 1.5em;
+}
+
+/*COST FLEX*/
+
+.cost {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .cost > span{
     margin-top: 0;
+    display: block;
+    line-height: .4;
 }
 
 .cost-currency{
@@ -151,4 +170,12 @@ main > * + * {
 .cost-cents{
     font-size: 1.5em;
     align-self: flex-start;
+}
+
+a.cta-button {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    text-decoration: none;
+    padding: .5em 1em;
 }
